@@ -103,7 +103,7 @@ function App() {
             {isLoading && <p className="text-gray-500">Calculating...</p>}
             {error && <p className="text-red-600 font-medium">{error}</p>}
             {!isLoading && !error && results.length > 0 && (
-              <ul className="list-disc list-inside space-y-2 text-gray-700">
+              <ul className="list-none list-inside space-y-2 text-gray-700">
                 {results.map((item, index) => (
                   <li key={index}>{item}</li>
                 ))}
@@ -114,10 +114,13 @@ function App() {
             )}
           </div>
         </div>
-
+        <footer className="w-full text-center py-4 text-gray-500 text-sm">
+          <p>&copy; {new Date().getFullYear()} Jeremy Nally. All Rights Reserved.</p>
+        </footer>
       </div>
     </div>
   );
 }
 
 export default App;
+
